@@ -1,14 +1,18 @@
 // Update with your config settings.
-
+require('dotenv/config');
 module.exports = {
 
   development: {
     client: 'mysql',
     connection: {
-      host : 'mysql5019.site4now.net',
-      user : 'a4c915_react',
-      password : 'react0000',
-      database : 'db_a4c915_react'
+      // host:'mysql5019.site4now.net', //host : process.env.DB_HOST,
+      // user: 'a4c915_react',//user : process.env.DB_USER,
+      // password: 'react0000',//password : process.env.DB_PASS,
+      // database: 'db_a4c915_react'//database : process.env.DB_NAME
+      host : process.env.DB_HOST,
+      user : process.env.DB_USER,
+      password : process.env.DB_PASS,
+      database : process.env.DB_NAME
     },
     useNullAsDefault: true,
     pool: {

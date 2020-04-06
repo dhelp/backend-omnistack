@@ -1,3 +1,5 @@
+require('dotenv/config');
+
 const express = require('express');
 
 const cors = require('cors');
@@ -27,6 +29,6 @@ request body: são os campos da requisição
 
 
 
-app.listen(3333);
+app.listen(process.env.PORT || 3333);
 
  
