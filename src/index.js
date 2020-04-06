@@ -28,7 +28,11 @@ request body: são os campos da requisição
 */
 
 
+var port = process.env.PORT || 3333;
+app.listen(port, function () {
+    console.log('listening on port %s', port);
+});
 
-app.listen(process.env.PORT || 3333);
+
 
  
